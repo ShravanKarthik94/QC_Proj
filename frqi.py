@@ -208,6 +208,8 @@ if __name__ == '__main__':
         # Normalization(0~pi/2)
         x_train /= 255.0
         x_train = np.arcsin(x_train)
+        plt.imshow(x_train[img_num].reshape(28,28), cmap='gray')
+        plt.show()
 
         backends = Aer.backends()
         #print("Aer backends:",backends)
